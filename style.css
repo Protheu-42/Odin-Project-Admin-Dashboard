@@ -9,6 +9,7 @@ body {
     height: 100vh;
     --primary-color: #f97316;
     --grey-color: #f1f5f9;
+    --standard-shadow: 0px 0px 3px -1px black;
 }
 
 li {
@@ -148,7 +149,7 @@ a {
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 1rem;
 }
 
@@ -156,7 +157,7 @@ a {
     background-color: white;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: inset 5px 0 #06b6d4;
+    box-shadow: inset 5px 0 #06b6d4, var(--standard-shadow);
 }
 
 .card h4 {
@@ -176,4 +177,27 @@ a {
 
 .card div {
     text-align: end;
+}
+
+.announcements ul {
+    margin-top: 10px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: var(--standard-shadow);
+}
+
+.announcements ul li {
+    margin-bottom: 15px;
+}
+
+hr {
+    margin-bottom: 10px;
+}
+
+.announcements p {
+    margin-top: 3px;
+    font-size: 0.8rem;
+    color: grey;
+    line-height: 1rem;
 }

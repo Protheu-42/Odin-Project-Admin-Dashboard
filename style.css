@@ -74,6 +74,7 @@ a {
     row-gap: 1rem;
     font-family: Roboto;
     font-weight: bold;
+    box-shadow: inset 0px -2px 1px -2px grey;
 }
 
 .header-icon {
@@ -179,12 +180,16 @@ a {
     text-align: end;
 }
 
-.announcements ul {
+.announcements ul,
+.trending ul {
     margin-top: 10px;
     background-color: white;
-    padding: 25px;
     border-radius: 5px;
     box-shadow: var(--standard-shadow);
+}
+
+.announcements ul {
+    padding: 25px;
 }
 
 .announcements ul li {
@@ -200,4 +205,28 @@ hr {
     font-size: 0.8rem;
     color: grey;
     line-height: 1rem;
+}
+
+.trending ul {
+    padding: 15px;
+    font-family: Roboto, sans-serif;
+    font-size: 0.8rem;
+}
+
+.trending ul li {
+    display: grid;
+    grid-template-columns: 55px 1fr;
+    gap: 3px;
+    align-items: center;
+}
+
+.trending ul li div :nth-child(2) {
+    margin-top: 2px;
+    color: grey;
+} 
+
+.trending-user-icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
 }
